@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
 class Video {
-  final String videoName;
+  final String videoTitle;
   final String authorName;
   final String views;
   final String publishDate;
   final String videoLength;
-  final Image videoImage;
-  final Image authorImage;
+  final String videoImagePath;
+  final String authorImagePath;
 
   Video(
-    this.videoName,
+    this.videoTitle,
     this.authorName,
     this.views,
     this.publishDate,
     this.videoLength,
-    this.videoImage,
-    this.authorImage,
+    this.videoImagePath,
+    this.authorImagePath,
   );
 }
 
@@ -27,7 +27,7 @@ List<Video> videos = [
     '59 mln wyświetleń',
     '4 lata temu',
     '5:38',
-    Image.asset('assets/peru_video.jpg'),
-    Image.asset('assets/jacob_logo.jpg'),
+    'assets/peru_video.jpg',
+    'assets/jacob_logo.jpg',
   ),
 ];

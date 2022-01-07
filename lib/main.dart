@@ -25,7 +25,10 @@ class MyApp extends StatelessWidget {
             selectedLabelStyle: TextStyle(fontSize: 12)),
       ),
       darkTheme: ThemeData(
-          textTheme: TextTheme(bodyText1: TextStyle(color: Colors.white)),
+          textTheme: TextTheme(
+            bodyText1: TextStyle(color: Colors.white),
+            bodyText2: TextStyle(color: Colors.white54),
+          ),
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
               type: BottomNavigationBarType.fixed,
               backgroundColor: Colors.black,
