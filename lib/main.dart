@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.red,
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             type: BottomNavigationBarType.fixed,
             backgroundColor: Colors.white,
             unselectedItemColor: Colors.black,
@@ -25,11 +25,15 @@ class MyApp extends StatelessWidget {
             selectedLabelStyle: TextStyle(fontSize: 12)),
       ),
       darkTheme: ThemeData(
-          textTheme: TextTheme(
+          buttonTheme: ButtonThemeData(
+            buttonColor: Color.fromARGB(255, 26, 26, 26),
+            
+          ),
+          textTheme: const TextTheme(
             bodyText1: TextStyle(color: Colors.white),
             bodyText2: TextStyle(color: Colors.white54),
           ),
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          bottomNavigationBarTheme: const BottomNavigationBarThemeData(
               type: BottomNavigationBarType.fixed,
               backgroundColor: Colors.black,
               unselectedItemColor: Colors.white,
@@ -37,8 +41,8 @@ class MyApp extends StatelessWidget {
               selectedItemColor: Colors.white,
               selectedLabelStyle: TextStyle(fontSize: 12)),
           scaffoldBackgroundColor: Colors.black,
-          appBarTheme: AppBarTheme(backgroundColor: Colors.black)),
-      home: AppbarNavbar(),
+          appBarTheme: const AppBarTheme(backgroundColor: Colors.black)),
+      home: const AppbarNavbar(),
     );
   }
 }

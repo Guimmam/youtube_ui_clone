@@ -22,6 +22,7 @@ class _AppbarNavbarState extends State<AppbarNavbar> {
     HomeScreen(),
     Center(child: FlutterLogo()),
     Text('subs'),
+    Scaffold()
   ];
 
   @override

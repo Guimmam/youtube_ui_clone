@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_ui_clone/models/video_model.dart';
+import 'package:youtube_ui_clone/widgets/horizontal_scroll_bar.dart';
 import 'package:youtube_ui_clone/widgets/video_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -27,9 +28,19 @@ class VideoList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: numberOfVideos,
-      itemBuilder: (context, index) => VideoWidget(index),
+    return Column(
+      children: [
+        Expanded(
+          child: ListView.builder(
+              itemCount: numberOfVideos + 1,
+              itemBuilder: (context, index) {
+                if (index == 0) {
+                  return HorizontalScrollBar();
+                } else
+                  return VideoWidget(index - 1);
+              }),
+        ),
+      ],
     );
   }
 }
