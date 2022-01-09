@@ -25,9 +25,15 @@ class MyApp extends StatelessWidget {
             selectedLabelStyle: TextStyle(fontSize: 12)),
       ),
       darkTheme: ThemeData(
+          primaryIconTheme: IconThemeData(color: Colors.white),
+          popupMenuTheme: PopupMenuThemeData(
+            color: Color.fromARGB(255, 26, 26, 26),
+            textStyle: TextStyle(color: Colors.white),
+          ),
+
+          // primarySwatch: Colors.red,
           buttonTheme: ButtonThemeData(
             buttonColor: Color.fromARGB(255, 26, 26, 26),
-            
           ),
           textTheme: const TextTheme(
             bodyText1: TextStyle(color: Colors.white),

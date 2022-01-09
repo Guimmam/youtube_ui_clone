@@ -30,46 +30,64 @@ class VideoWidget extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CircleAvatar(
-                  backgroundImage: AssetImage(videos[index].authorImagePath),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 0.65,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(videos[index].videoTitle,
-                            style: Theme.of(context).textTheme.bodyText1),
-                        Wrap(
-                          direction: Axis.horizontal,
-                          spacing: 5,
-                          children: [
-                            Text(
-                              '${videos[index].authorName}',
-                              softWrap: true,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            Text(videos[index].views,
-                                softWrap: true, overflow: TextOverflow.visible),
-                            Text(videos[index].publishDate,
-                                style: Theme.of(context).textTheme.bodyText2)
-                          ],
-                        )
+          Container(
+            margin: EdgeInsets.only(bottom: 10),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.1,
+                    child: CircleAvatar(
+                      backgroundImage:
+                          AssetImage(videos[index].authorImagePath),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.70,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(videos[index].videoTitle,
+                              style: Theme.of(context).textTheme.bodyText1),
+                          Container(height: 4),
+                          Text(
+                            '${videos[index].authorName} • ${videos[index].views} • ${videos[index].publishDate}',
+                            maxLines: 2,
+                            softWrap: true,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.1,
+                    height: 20,
+                    margin: EdgeInsets.only(bottom: 35),
+                    //color: Colors.red,
+                    child: PopupMenuButton(
+                      padding: EdgeInsets.only(bottom: 50),
+                      iconSize: 18,
+                      icon: Icon(
+                        Icons.more_vert,
+                        color: Colors.white,
+                      ),
+                      itemBuilder: (context) => [
+                        PopupMenuItem(
+                            child: Text('Zapisz na liście Do obejrzenia')),
+                        PopupMenuItem(child: Text('Zapisz na playliście')),
+                        PopupMenuItem(child: Text('Udostępnij')),
+                        PopupMenuItem(child: Text('Nie interesuje mnie to')),
+                        PopupMenuItem(child: Text('Nie polecaj kanału')),
+                        PopupMenuItem(child: Text('Zgłoś')),
                       ],
                     ),
                   ),
-                ),
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.more_vert, color: Colors.white)),
-              ],
+                ],
+              ),
             ),
           )
         ],
