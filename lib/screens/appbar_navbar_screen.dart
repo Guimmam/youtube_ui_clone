@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_ui_clone/screens/home_screen.dart';
+import 'package:youtube_ui_clone/screens/library_screen.dart';
 import 'package:youtube_ui_clone/widgets/horizontal_scroll_bar.dart';
 
 class AppbarNavbar extends StatefulWidget {
@@ -22,7 +23,7 @@ class _AppbarNavbarState extends State<AppbarNavbar> {
     HomeScreen(),
     Center(child: FlutterLogo()),
     Text('subs'),
-    Scaffold()
+    LibraryScreen(),
   ];
 
   @override
@@ -78,8 +79,8 @@ class _AppbarNavbarState extends State<AppbarNavbar> {
               label: 'Subskrypcje'),
           BottomNavigationBarItem(
               icon: _selectedIndex == 3
-                  ? Icon(Icons.library_add)
-                  : Icon(Icons.library_add_outlined),
+                  ? Icon(Icons.video_library)
+                  : Icon(Icons.video_library_outlined),
               label: 'Biblioteka'),
         ],
       ),
