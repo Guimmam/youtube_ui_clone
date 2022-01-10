@@ -8,7 +8,8 @@ class SmallVideoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     int index = 1;
     return Container(
-      width: 200,
+      padding: EdgeInsets.all(8),
+      width: MediaQuery.of(context).size.width * 0.45,
       child: Column(
         children: [
           Stack(
@@ -38,7 +39,7 @@ class SmallVideoWidget extends StatelessWidget {
                     color: Colors.black,
                     child: Text(
                       videos[index].videoLength,
-                      style: TextStyle(color: Colors.white),
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
                 ),
@@ -53,7 +54,10 @@ class SmallVideoWidget extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Leksiu'),
+                  Text(
+                    'Leksiu',
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ),
                   Container(
                     height: 20,
                     width: 12,

@@ -12,7 +12,26 @@ class LibraryScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SmallVideoWidget(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text('Najnowsze',
+                        style: Theme.of(context).textTheme.bodyText1)),
+              ),
+              Container(
+                height: 155,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) => SmallVideoWidget(),
+                ),
+              ),
+              Divider(
+                thickness: 2,
+                color: Color.fromARGB(255, 26, 26, 26),
+              ),
             ],
           ),
         ),
