@@ -25,6 +25,10 @@ class MyApp extends StatelessWidget {
             selectedLabelStyle: TextStyle(fontSize: 12)),
       ),
       darkTheme: ThemeData(
+          listTileTheme: ListTileThemeData(
+            iconColor: Colors.white,
+            textColor: Colors.white,
+          ),
           primaryIconTheme: IconThemeData(color: Colors.white),
           popupMenuTheme: PopupMenuThemeData(
             color: Color.fromARGB(255, 26, 26, 26),
