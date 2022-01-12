@@ -63,6 +63,8 @@ flutter:
     - assets/guimmam_logo.jpg
     - assets/jacob_logo.jpg
     - assets/peru_video.jpg
+    - assets/nieantyfan_logo.jpg
+    - assets/iphone13_video.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

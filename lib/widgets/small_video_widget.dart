@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:youtube_ui_clone/models/video_model.dart';
 
 class SmallVideoWidget extends StatelessWidget {
-  const SmallVideoWidget({Key? key}) : super(key: key);
+  final index;
+  const SmallVideoWidget(this.index, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    int index = 1;
     return Container(
       padding: EdgeInsets.all(8),
       width: MediaQuery.of(context).size.width * 0.45,
@@ -54,18 +54,21 @@ class SmallVideoWidget extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Leksiu',
-                    style: Theme.of(context).textTheme.bodyText1,
+                  Expanded(
+                    child: Text(
+                      videos[index].videoTitle,
+                      maxLines: 1,
+                      softWrap: true,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
                   ),
                   Container(
                     height: 20,
                     width: 12,
-                    //padding: EdgeInsets.only(left: 10),
                     child: PopupMenuButton(
                       padding: EdgeInsets.zero,
                       iconSize: 18,
-                      // padding: EdgeInsets.zero,
                       icon: Icon(
                         Icons.more_vert,
                         color: Colors.white,
@@ -83,7 +86,10 @@ class SmallVideoWidget extends StatelessWidget {
               ),
               Align(
                   alignment: Alignment.topLeft,
-                  child: Text('Mateusz Spysiński'))
+                  child: Text(
+                    videos[index].authorName,
+                    overflow: TextOverflow.ellipsis,
+                  ))
             ],
           )
         ],

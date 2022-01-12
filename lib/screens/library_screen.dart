@@ -22,10 +22,9 @@ class LibraryScreen extends StatelessWidget {
               Container(
                 height: 155,
                 child: ListView.builder(
-                  shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemCount: 10,
-                  itemBuilder: (context, index) => SmallVideoWidget(),
+                  itemCount: videos.length,
+                  itemBuilder: (context, index) => SmallVideoWidget(index),
                 ),
               ),
               Divider(
@@ -87,6 +86,22 @@ class LibraryScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              ListTile(
+                iconColor: Colors.blue,
+                leading: Icon(Icons.add_sharp),
+                title: Text(
+                  'Nowa playlista',
+                  style: TextStyle(color: Colors.blue),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.thumb_up_alt_outlined),
+                title: Text('Polubione filmy'),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(50.0),
+                child: Center(child: Text('Nie masz żadnych playlist')),
               )
             ],
           ),
