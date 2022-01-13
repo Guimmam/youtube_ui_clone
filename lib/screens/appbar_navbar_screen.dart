@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_ui_clone/screens/Explore_screen.dart';
 import 'package:youtube_ui_clone/screens/home_screen.dart';
 import 'package:youtube_ui_clone/screens/library_screen.dart';
+import 'package:youtube_ui_clone/screens/subscriptions_screen.dart';
 import 'package:youtube_ui_clone/widgets/horizontal_scroll_bar.dart';
 
 class AppbarNavbar extends StatefulWidget {
@@ -21,8 +23,8 @@ class _AppbarNavbarState extends State<AppbarNavbar> {
 
   List<Widget> screens = <Widget>[
     HomeScreen(),
-    Center(child: FlutterLogo()),
-    Text('subs'),
+    ExploreScreen(),
+    SubscriptionsScreen(),
     LibraryScreen(),
   ];
 

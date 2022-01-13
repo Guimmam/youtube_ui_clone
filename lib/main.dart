@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
             buttonColor: Color.fromARGB(255, 26, 26, 26),
           ),
           textTheme: const TextTheme(
-            bodyText1: TextStyle(color: Colors.white),
+            bodyText1: TextStyle(color: Colors.white, fontSize: 16),
             bodyText2: TextStyle(color: Colors.white54),
           ),
           bottomNavigationBarTheme: const BottomNavigationBarThemeData(

@@ -31,11 +31,12 @@ class VideoWidget extends StatelessWidget {
             ],
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 10),
+            margin: const EdgeInsets.only(bottom: 10),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width * 0.1,
@@ -65,12 +66,8 @@ class VideoWidget extends StatelessWidget {
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.1,
-                    height: 20,
-                    margin: EdgeInsets.only(bottom: 35),
-                    //color: Colors.red,
                     child: PopupMenuButton(
-                      
-                      padding: EdgeInsets.only(bottom: 50),
+                      padding: EdgeInsets.only(bottom: 30),
                       iconSize: 18,
                       icon: Icon(
                         Icons.more_vert,
