@@ -65,6 +65,12 @@ flutter:
     - assets/peru_video.jpg
     - assets/nieantyfan_logo.jpg
     - assets/iphone13_video.jpg
+    - assets/mac_m1_video.jpg
+    - assets/marques_logo.jpg
+    - assets/how_apple_won_video.jpg
+    - assets/tech_altar_logo.jpg
+    - assets/humanoid_video.jpg
+    - assets/mrkeybrd_logo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
