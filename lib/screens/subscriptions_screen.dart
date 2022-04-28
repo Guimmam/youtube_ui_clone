@@ -28,7 +28,7 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
             itemBuilder: (context, index) {
               if (index == 0) {
                 return Container(
-                  padding: EdgeInsets.symmetric(vertical: 4),
+                  padding: const EdgeInsets.symmetric(vertical: 4),
                   height: 50,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
@@ -37,7 +37,7 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
                       padding: const EdgeInsets.all(3.0),
                       child: ChoiceChip(
                         label: Text(horizontalButtons.elementAt(index)),
-                        backgroundColor: Color.fromARGB(255, 26, 26, 26),
+                        backgroundColor: const Color.fromARGB(255, 26, 26, 26),
                         side: BorderSide(
                             color: Colors.white.withOpacity(0.2), width: 1),
                         selectedColor: Colors.white,
@@ -54,8 +54,9 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
                     ),
                   ),
                 );
-              } else
+              } else {
                 return VideoWidget(index - 1);
+              }
             }),
       ),
     );

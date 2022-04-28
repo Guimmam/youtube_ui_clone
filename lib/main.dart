@@ -24,19 +24,20 @@ class MyApp extends StatelessWidget {
             selectedItemColor: Colors.black,
             selectedLabelStyle: TextStyle(fontSize: 12)),
       ),
+      themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
-          listTileTheme: ListTileThemeData(
+          listTileTheme: const ListTileThemeData(
             iconColor: Colors.white,
             textColor: Colors.white,
           ),
-          primaryIconTheme: IconThemeData(color: Colors.white),
-          popupMenuTheme: PopupMenuThemeData(
+          primaryIconTheme: const IconThemeData(color: Colors.white),
+          popupMenuTheme: const PopupMenuThemeData(
             color: Color.fromARGB(255, 26, 26, 26),
             textStyle: TextStyle(color: Colors.white),
           ),
 
           // primarySwatch: Colors.red,
-          buttonTheme: ButtonThemeData(
+          buttonTheme: const ButtonThemeData(
             buttonColor: Color.fromARGB(255, 26, 26, 26),
           ),
           textTheme: const TextTheme(

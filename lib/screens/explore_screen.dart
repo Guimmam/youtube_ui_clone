@@ -20,8 +20,9 @@ class ExploreScreen extends StatelessWidget {
                       child: Text('Filmy zyskujące popularność',
                           style: Theme.of(context).textTheme.bodyText1)),
                 );
-              } else
+              } else {
                 return VideoWidget(index - 1);
+              }
             }),
       ),
     );

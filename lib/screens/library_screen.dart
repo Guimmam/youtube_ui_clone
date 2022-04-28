@@ -19,7 +19,7 @@ class LibraryScreen extends StatelessWidget {
                     child: Text('Najnowsze',
                         style: Theme.of(context).textTheme.bodyText1)),
               ),
-              Container(
+              SizedBox(
                 height: 155,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -27,33 +27,33 @@ class LibraryScreen extends StatelessWidget {
                   itemBuilder: (context, index) => SmallVideoWidget(index),
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 2,
                 color: Color.fromARGB(255, 26, 26, 26),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(Icons.history),
                 title: Text('Historia'),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(Icons.video_collection_outlined),
                 title: Text('Twoje filmy'),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(Icons.local_movies_outlined),
                 title: Text('Kupione filmy'),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(Icons.watch_later_outlined),
                 title: Text('Do obejrzenia'),
                 subtitle: Text('99 nieobejrzanych filmów'),
               ),
-              Divider(
+              const Divider(
                 thickness: 2,
                 color: Color.fromARGB(255, 26, 26, 26),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -72,22 +72,22 @@ class LibraryScreen extends StatelessWidget {
                               'Ostatnio dodane',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
-                            Icon(
+                            const Icon(
                               Icons.keyboard_arrow_down_sharp,
                               color: Colors.white,
                             ),
                           ],
                         ),
                         itemBuilder: (context) => [
-                          PopupMenuItem(child: Text('A-Z')),
-                          PopupMenuItem(child: Text('Ostatnio dodane')),
+                          const PopupMenuItem(child: Text('A-Z')),
+                          const PopupMenuItem(child: Text('Ostatnio dodane')),
                         ],
                       ),
                     ),
                   ],
                 ),
               ),
-              ListTile(
+              const ListTile(
                 iconColor: Colors.blue,
                 leading: Icon(Icons.add_sharp),
                 title: Text(
@@ -95,12 +95,12 @@ class LibraryScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.blue),
                 ),
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(Icons.thumb_up_alt_outlined),
                 title: Text('Polubione filmy'),
               ),
-              Padding(
-                padding: const EdgeInsets.all(50.0),
+              const Padding(
+                padding: EdgeInsets.all(50.0),
                 child: Center(child: Text('Nie masz żadnych playlist')),
               )
             ],

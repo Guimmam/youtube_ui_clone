@@ -33,9 +33,10 @@ class VideoList extends StatelessWidget {
               itemCount: numberOfVideos + 1,
               itemBuilder: (context, index) {
                 if (index == 0) {
-                  return HorizontalScrollBar();
-                } else
+                  return const HorizontalScrollBar();
+                } else {
                   return VideoWidget(index - 1);
+                }
               }),
         ),
       ],

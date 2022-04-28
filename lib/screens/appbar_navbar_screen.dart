@@ -3,7 +3,6 @@ import 'package:youtube_ui_clone/screens/Explore_screen.dart';
 import 'package:youtube_ui_clone/screens/home_screen.dart';
 import 'package:youtube_ui_clone/screens/library_screen.dart';
 import 'package:youtube_ui_clone/screens/subscriptions_screen.dart';
-import 'package:youtube_ui_clone/widgets/horizontal_scroll_bar.dart';
 
 class AppbarNavbar extends StatefulWidget {
   const AppbarNavbar({Key? key}) : super(key: key);
@@ -22,10 +21,10 @@ class _AppbarNavbarState extends State<AppbarNavbar> {
   }
 
   List<Widget> screens = <Widget>[
-    HomeScreen(),
-    ExploreScreen(),
-    SubscriptionsScreen(),
-    LibraryScreen(),
+    const HomeScreen(),
+    const ExploreScreen(),
+    const SubscriptionsScreen(),
+    const LibraryScreen(),
   ];
 
   @override
@@ -33,20 +32,20 @@ class _AppbarNavbarState extends State<AppbarNavbar> {
     return Scaffold(
       appBar: AppBar(
         leading: Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Image.asset(
             'assets/yt_logo_dark.png',
           ),
         ),
         leadingWidth: 120,
-        actionsIconTheme: IconThemeData(color: Colors.white),
+        actionsIconTheme: const IconThemeData(color: Colors.white),
         actions: [
           Container(
-            padding: EdgeInsets.only(right: 10),
+            padding: const EdgeInsets.only(right: 10),
             width: 160,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Icon(Icons.cast_sharp),
                 Icon(Icons.notifications_none),
                 Icon(Icons.search),
@@ -66,23 +65,23 @@ class _AppbarNavbarState extends State<AppbarNavbar> {
         items: [
           BottomNavigationBarItem(
               icon: _selectedIndex == 0
-                  ? Icon(Icons.home)
-                  : Icon(Icons.home_outlined),
+                  ? const Icon(Icons.home)
+                  : const Icon(Icons.home_outlined),
               label: 'Główna'),
           BottomNavigationBarItem(
               icon: _selectedIndex == 1
-                  ? Icon(Icons.explore)
-                  : Icon(Icons.explore_outlined),
+                  ? const Icon(Icons.explore)
+                  : const Icon(Icons.explore_outlined),
               label: 'Eksploruj'),
           BottomNavigationBarItem(
               icon: _selectedIndex == 2
-                  ? Icon(Icons.subscriptions)
-                  : Icon(Icons.subscriptions_outlined),
+                  ? const Icon(Icons.subscriptions)
+                  : const Icon(Icons.subscriptions_outlined),
               label: 'Subskrypcje'),
           BottomNavigationBarItem(
               icon: _selectedIndex == 3
-                  ? Icon(Icons.video_library)
-                  : Icon(Icons.video_library_outlined),
+                  ? const Icon(Icons.video_library)
+                  : const Icon(Icons.video_library_outlined),
               label: 'Biblioteka'),
         ],
       ),

@@ -24,7 +24,7 @@ class _HorizontalScrollBarState extends State<HorizontalScrollBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 50,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -34,16 +34,16 @@ class _HorizontalScrollBarState extends State<HorizontalScrollBar> {
               return Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                     child: ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 26, 26, 26),
+                          primary: const Color.fromARGB(255, 26, 26, 26),
                         ),
                         onPressed: () {},
-                        icon: Icon(Icons.explore_outlined),
-                        label: Text('Odkrywaj')),
+                        icon: const Icon(Icons.explore_outlined),
+                        label: const Text('Odkrywaj')),
                   ),
-                  VerticalDivider(
+                  const VerticalDivider(
                     indent: 6,
                     endIndent: 6,
                     thickness: 2,
@@ -51,12 +51,12 @@ class _HorizontalScrollBarState extends State<HorizontalScrollBar> {
                   ),
                 ],
               );
-            } else
+            } else {
               return Padding(
                 padding: const EdgeInsets.all(3.0),
                 child: ChoiceChip(
                   label: Text(horizontalButtons.elementAt(index - 1)),
-                  backgroundColor: Color.fromARGB(255, 26, 26, 26),
+                  backgroundColor: const Color.fromARGB(255, 26, 26, 26),
                   side: BorderSide(
                       color: Colors.white.withOpacity(0.2), width: 1),
                   selectedColor: Colors.white,
@@ -70,6 +70,7 @@ class _HorizontalScrollBarState extends State<HorizontalScrollBar> {
                   },
                 ),
               );
+            }
           },
         ));
   }
