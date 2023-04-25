@@ -1,5 +1,5 @@
 # YouTube UI Clone
-Simple app written in Flutter that I made that app to practice my UX, UI and design skills.
+Simple app written in Flutter that I made to practice my UX, UI and design skills.
 
 ## Used technologies
 Flutter, Dart
